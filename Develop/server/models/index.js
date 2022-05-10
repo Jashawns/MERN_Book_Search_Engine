@@ -1,3 +1,6 @@
 const User = require('./User');
 
-module.exports = { User };
+// added to connect book model
+const Book = require('./Book');
+
+module.exports = { User, Book };
