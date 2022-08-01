@@ -1,6 +1,21 @@
 <!DOCTYPE html>
 <html lang="en">
 
+  <script>
+    if (‘serviceWorker’ in navigator) { 
+      window.addEventListener(‘load’, function() {   
+        navigator.serviceWorker.register(‘/serviceWorker.js’).then(
+          function(registration) { 
+            // Registration was successful
+            console.log(‘ServiceWorker registration successful with scope: ‘, registration.scope); }, 
+          function(err) { 
+            // registration failed :( 
+            console.log(‘ServiceWorker registration failed: ‘, err); 
+          }); 
+      });
+    }
+    </script>
+
 <head>
   <meta charset="utf-8" />
   <link rel="icon" href="%PUBLIC_URL%/favicon.ico" />
